@@ -1,0 +1,448 @@
+/* src/app/components/home/home.component.css */
+
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  color: #333;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #4CAF50;
+  color: white;
+  padding: 20px 0;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar .logo h1 {
+  font-size: 1.8em;
+}
+
+.navbar .menu {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.navbar .menu li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 5px 10px;
+  transition: background-color 0.3s, border-radius 0.3s;
+}
+
+.navbar .menu li a:hover,
+.navbar .menu li a.active {
+  background-color: #367c39;
+  border-radius: 5px;
+}
+
+/* Botões */
+.buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.btn-register,
+.btn-login {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.btn-register {
+  background-color: #ff9800;
+  color: white;
+}
+
+.btn-register:hover {
+  background-color: #e68900;
+}
+
+.btn-login {
+  background-color: #ffffff;
+  color: #4CAF50;
+  border: 2px solid #4CAF50;
+}
+
+.btn-login:hover {
+  background-color: #f1f1f1;
+}
+
+/* Seção Hero */
+.hero {
+  background-image: url('../../../assets/alans.jpg');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 100px 0;
+  text-align: center;
+}
+
+.hero .hero-content h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.hero .hero-content p {
+  font-size: 1.2em;
+  margin-bottom: 30px;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
+
+.hero .hero-content .btn {
+  padding: 15px 30px;
+  background-color: #ff9800;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 1em;
+  transition: background-color 0.3s;
+}
+
+.hero .hero-content .btn:hover {
+  background-color: #e68900;
+}
+
+/* Seção Sobre */
+.sobre {
+  padding: 60px 20px; /* Adiciona padding horizontal para pequenos dispositivos */
+  background-color: #f9f9f9;
+  display: flex;
+  flex-direction: column;   /* Empilha imagem e texto verticalmente */
+  justify-content: center;  /* Centraliza verticalmente */
+  align-items: center;      /* Centraliza horizontalmente */
+  gap: 40px;
+  text-align: center;       /* Centraliza o texto dentro dos itens */
+}
+
+.sobre-img {
+  width: 50px;             /* Largura fixa para a imagem */
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.sobre-text {
+  max-width: 600px;         /* Define uma largura máxima para o texto */
+  width: 100%;              /* Ocupa toda a largura disponível */
+  text-align: center;       /* Centraliza o texto dentro da div */
+}
+
+.sobre-text h3 {
+  font-size: 1.8em;
+  color: #4CAF50;
+  margin-bottom: 15px;
+}
+
+.sobre-text p {
+  font-size: 1em;
+  line-height: 1.6;
+}
+
+/* Seção Benefícios */
+.beneficios {
+  padding: 60px 0;
+  text-align: center;
+}
+
+.beneficios h2 {
+  font-size: 1.8em;
+  color: #4CAF50;
+  margin-bottom: 40px;
+}
+
+.beneficios-cards {
+  display: flex;
+  justify-content: center; /* Centraliza as cartas */
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.beneficios .card {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 30%;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.beneficios .card:hover {
+  transform: translateY(-10px);
+}
+
+.beneficios .card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+.beneficios .card h4 {
+  font-size: 1.2em;
+  color: #4CAF50;
+  margin-bottom: 10px;
+}
+
+.beneficios .card p {
+  font-size: 0.95em;
+  line-height: 1.4;
+}
+
+/* Seção Planos de Dieta */
+.planos {
+  padding: 60px 0;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.planos h2 {
+  font-size: 1.8em;
+  color: #4CAF50;
+  margin-bottom: 40px;
+}
+
+.planos-cards {
+  display: flex;
+  justify-content: center; /* Centraliza as cartas */
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.planos .card {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 30%;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.planos .card:hover {
+  transform: translateY(-10px);
+}
+
+.planos .card h4 {
+  font-size: 1.3em;
+  color: #4CAF50;
+  margin-bottom: 15px;
+}
+
+.planos .card p {
+  font-size: 0.95em;
+  line-height: 1.4;
+  margin-bottom: 20px;
+}
+
+.planos .card .btn {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 0.95em;
+  transition: background-color 0.3s;
+}
+
+.planos .card .btn:hover {
+  background-color: #367c39;
+}
+
+/* Seção Dicas */
+.dicas {
+  padding: 60px 0;
+  text-align: center;
+}
+
+.dicas h2 {
+  font-size: 1.8em;
+  color: #4CAF50;
+  margin-bottom: 40px;
+}
+
+.dicas ul {
+  list-style: none;
+  max-width: 800px;
+  margin: auto;
+  text-align: left;
+}
+
+.dicas ul li {
+  background-color: white;
+  padding: 15px 20px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  position: relative;
+  padding-left: 40px;
+}
+
+.dicas ul li::before {
+  content: '✓';
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #4CAF50;
+  font-size: 1.2em;
+}
+
+/* Modal de Registro */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal.show {
+  display: flex;
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 30px 40px;
+  border-radius: 10px;
+  position: relative;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.modal-content h2 {
+  margin-bottom: 20px;
+  color: #4CAF50;
+}
+
+.modal-content label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.modal-content input {
+  width: 100%;
+  padding: 10px 15px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.modal-content button {
+  width: 100%;
+  padding: 12px;
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  font-size: 1em;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.modal-content button:hover {
+  background-color: #367c39;
+}
+
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 1.5em;
+  color: #aaa;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.close-btn:hover {
+  color: #333;
+}
+
+/* Rodapé */
+footer {
+  background-color: #333;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+}
+
+footer .social a {
+  color: white;
+  margin: 0 10px;
+  font-size: 1.2em;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+footer .social a:hover {
+  color: #4CAF50;
+}
+
+/* Responsividade */
+@media (max-width: 992px) {
+  .sobre {
+    flex-direction: column; /* Empilha os itens verticalmente */
+    text-align: center;     /* Centraliza o texto */
+  }
+
+  .sobre-img,
+  .sobre-text {
+    width: 80%;             /* Ajusta a largura para telas menores */
+  }
+
+  .beneficios .card,
+  .planos .card {
+    width: 45%;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar .menu {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .beneficios .card,
+  .planos .card {
+    width: 100%;
+  }
+
+  .dicas ul {
+    padding: 0 10px;
+  }
+
+  .buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .btn-register,
+  .btn-login {
+    width: 100%;
+  }
+}

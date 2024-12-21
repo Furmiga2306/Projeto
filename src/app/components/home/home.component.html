@@ -1,0 +1,138 @@
+<router-outlet></router-outlet>
+<div>
+  <!-- Barra de Navegação -->
+  <header>
+    <nav class="navbar">
+      <div class="container">
+        <div class="logo">
+          <h1>Vida Saudável</h1>
+        </div>
+        <ul class="menu">
+          <li><a href="/" class="active">Início</a></li>
+          <li><a href="/sobre" class="active">Sobre</a></li>
+          <li><a href="/planos-dieta" class="active">Planos de Dieta</a></li>
+          <li><a href="/dicas" class="active">Dicas</a></li>
+          <li><a href="/contato" class="active">Contato</a></li>
+        </ul>
+        <!-- Botões Entrar e Registrar -->
+        <div class="buttons">
+          <button class="btn-register" (click)="openModal()">Registrar</button>
+          <a href="/login" class="btn-login">Entrar</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Seção Hero -->
+  <section class="hero">
+    <div class="hero-content">
+      <h2>Transforme Sua Vida com uma Dieta Equilibrada</h2>
+      <p>Descubra como uma alimentação saudável e a organização podem melhorar sua saúde e bem-estar.</p>
+      <a href="/login" class="btn">Saiba Mais</a>
+    </div>
+  </section>
+
+  <!-- Seção Sobre -->
+  <section class="sobre">
+    <div class="container">
+      <img src="../../../assets/web.png" alt="Sobre Dieta e Organização" class="sobre-img">
+      <div class="sobre-text">
+        <h3>O Que é uma Dieta Equilibrada?</h3>
+        <p>
+          Uma dieta equilibrada inclui uma variedade de alimentos que fornecem os nutrientes essenciais necessários para o bom funcionamento do corpo. Combinada com uma boa organização, ela pode ajudar a manter hábitos saudáveis, controlar o peso e prevenir doenças.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Seção Benefícios -->
+  <section class="beneficios">
+    <div class="container">
+      <h2>Benefícios de uma Dieta Saudável e Organização</h2>
+      <div class="beneficios-cards">
+        <div class="card">
+          <img src="../../../assets/download (2).jpg" alt="Melhora da Saúde">
+          <h4>Melhora da Saúde</h4>
+          <p>Redução do risco de doenças crônicas como diabetes e hipertensão.</p>
+        </div>
+        <div class="card">
+          <img src="../../../assets/download (1).jpg" alt="Controle de Peso">
+          <h4>Controle de Peso</h4>
+          <p>Ajudando na perda de peso e na manutenção de um peso saudável.</p>
+        </div>
+        <div class="card">
+          <img src="../../../assets/download (3).jpg" alt="Mais Energia">
+          <h4>Mais Energia</h4>
+          <p>Aumento dos níveis de energia e disposição para as atividades diárias.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Seção de Planos de Dieta -->
+  <section class="planos">
+    <div class="container">
+      <h2>Planos de Dieta</h2>
+      <div class="planos-cards">
+        <div class="card">
+          <h4>Dieta Mediterrânea</h4>
+          <p>Enfatiza frutas, vegetais, peixes e azeite de oliva.</p>
+          <a href="/planos-dieta" class="btn">Saiba Mais</a>
+        </div>
+        <div class="card">
+          <h4>Dieta Keto</h4>
+          <p>Baixa em carboidratos e rica em gorduras saudáveis.</p>
+          <a href="/planos-dieta" class="btn">Saiba Mais</a>
+        </div>
+        <div class="card">
+          <h4>Dieta Vegetariana</h4>
+          <p>Exclusivamente baseada em alimentos de origem vegetal.</p>
+          <a href="/planos-dieta" class="btn">Saiba Mais</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Seção de Dicas -->
+  <section class="dicas">
+    <div class="container">
+      <h2>Dicas para uma Vida Saudável e Organizada</h2>
+      <ul>
+        <li>Mantenha um diário alimentar para acompanhar suas refeições.</li>
+        <li>Planeje suas refeições com antecedência para evitar escolhas impulsivas.</li>
+        <li>Inclua uma variedade de alimentos em sua dieta para garantir todos os nutrientes.</li>
+        <li>Estabeleça uma rotina de exercícios físicos para complementar sua alimentação.</li>
+        <li>Dedique um tempo para organizar seu espaço diariamente, promovendo um ambiente tranquilo.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Modal de Registro -->
+  <div class="modal" [ngClass]="{ 'show': isModalOpen }" (click)="closeModal($event)">
+    <div class="modal-content">
+      <span class="close-btn" (click)="closeModal()">&times;</span>
+      <h2>Registrar</h2>
+      <form>
+        <label for="name">Nome</label>
+        <input type="text" id="name" placeholder="Digite seu nome" required />
+        <label for="email">E-mail</label>
+        <input type="email" id="email" placeholder="Digite seu e-mail" required />
+        <label for="password">Senha</label>
+        <input type="password" id="password" placeholder="Digite sua senha" required />
+        <button type="submit">Registrar</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Rodapé -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2024 Vida Saudável. Todos os direitos reservados.</p>
+      <div class="social">
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+      </div>
+    </div>
+  </footer>
+</div>
